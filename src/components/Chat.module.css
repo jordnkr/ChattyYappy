@@ -1,0 +1,10 @@
+.messages {
+  width: 100%;
+}
+
+.message {
+  border-bottom: solid 1px rgb(78, 78, 78);
+  max-width: 500px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
