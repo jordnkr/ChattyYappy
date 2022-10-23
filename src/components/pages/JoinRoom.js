@@ -16,7 +16,7 @@ const JoinRoom = () => {
         Room Name
         <input type="text" onChange={roomChangeHandler} value={roomName} />
       </label>
-      <div><Link to={`/${roomName}`}>Join Room</Link></div>
+      <div><Link to={`/room/${roomName}`}>Join Room</Link></div>
     </>
   );
 };
