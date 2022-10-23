@@ -15,7 +15,7 @@ const ChatRoom = (props) => {
         <h2>You're in room: {room}</h2>
       </div>
       <div className={classes.leave}>
-        <Link to={"/room"}>Leave Room</Link>
+        <Link to={"/ChattyYappy"}>Leave Room</Link>
       </div>
       <Chat messages={chatMessages} onSend={sendMessage} />
     </>
