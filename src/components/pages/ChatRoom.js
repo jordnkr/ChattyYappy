@@ -8,7 +8,6 @@ import classes from "./ChatRoom.module.css";
 const ChatRoom = (props) => {
   const room = useParams().room;
   const { chatMessages, userId, sendMessage } = useMessage(room);
-  console.log(chatMessages);
 
   return (
     <>
