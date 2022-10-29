@@ -7,7 +7,8 @@ import classes from "./ChatRoom.module.css";
 
 const ChatRoom = (props) => {
   const room = useParams().room;
-  const { chatMessages, sendMessage } = useMessage(room);
+  const { chatMessages, userId, sendMessage } = useMessage(room);
+  console.log(chatMessages);
 
   return (
     <>
@@ -17,7 +18,7 @@ const ChatRoom = (props) => {
       <div className={classes.leave}>
         <Link to={"/ChattyYappy"}>Leave Room</Link>
       </div>
-      <Chat messages={chatMessages} onSend={sendMessage} />
+      <Chat messages={chatMessages} myId={userId} onSend={sendMessage} />
     </>
   );
 };

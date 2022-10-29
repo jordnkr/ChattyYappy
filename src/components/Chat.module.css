@@ -8,3 +8,11 @@
   padding-bottom: 10px;
   line-height: 20px;
 }
+
+.other-message {
+  color: blue;
+}
+
+.my-message {
+  color: red;
+}

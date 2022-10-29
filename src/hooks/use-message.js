@@ -15,30 +15,38 @@ const useMessage = (room) => {
       },
     });
 
-    socketRef.current.emit("new-message", [userId, `Anonymous${userId} joined the chat`]);
+    socketRef.current.emit("new-message", [
+      userId,
+      `Anonymous${userId} joined the chat`,
+    ]);
 
     // receive a message from the server
     socketRef.current.on("mail-delivery", (message) => {
-      if (message[0] !== userId) {
-        setChatMessages((prevMessages) => [...prevMessages, message[1]])
-      }
+      setChatMessages((prevMessages) => [
+        ...prevMessages,
+        { id: message[0], content: message[1] },
+      ]);
     });
 
     return () => {
-      socketRef.current.emit("new-message", [userId, `Anonymous${userId} left the chat`]);
+      socketRef.current.emit("new-message", [
+        userId,
+        `Anonymous${userId} left the chat`,
+      ]);
       socketRef.current.disconnect();
     };
   }, [room, userId]);
 
   const sendMessage = (message) => {
     // send a message to the server
-    socketRef.current.emit("new-message", message);
+    socketRef.current.emit("new-message", [userId, message]);
   };
 
   return {
     chatMessages,
-    sendMessage
-  }
+    userId,
+    sendMessage,
+  };
 };
 
 export default useMessage;
