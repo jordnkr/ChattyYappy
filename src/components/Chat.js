@@ -25,7 +25,7 @@ const Chat = (props) => {
                 : classes["other-message"]
             }`}
           >
-            {message.content}
+            {`${message.content} (${message.time})`}
           </p>
         ))}
       </div>
