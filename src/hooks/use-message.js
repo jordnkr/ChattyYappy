@@ -6,6 +6,7 @@ const SERVER_URL = "http://localhost:4000";
 
 const useMessage = (room) => {
   const [chatMessages, setChatMessages] = useState([]);
+  const [users, setUsers] = useState([]);
   const [userId, setUserId] = useState("");
   let socketRef = useRef();
 
@@ -29,6 +30,10 @@ const useMessage = (room) => {
       ]);
     });
 
+    socketRef.current.on("user-update", (users) => {
+      setUsers(users);
+    });
+
     return () => {
       socketRef.current.disconnect();
     };
@@ -41,6 +46,7 @@ const useMessage = (room) => {
 
   return {
     chatMessages,
+    users,
     userId,
     sendMessage,
   };

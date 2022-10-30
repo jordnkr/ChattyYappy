@@ -2,12 +2,13 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import useMessage from "../../hooks/use-message";
 import Chat from "../Chat";
+import Users from "../Users";
 
 import classes from "./ChatRoom.module.css";
 
 const ChatRoom = (props) => {
   const room = useParams().room;
-  const { chatMessages, userId, sendMessage } = useMessage(room);
+  const { chatMessages, users, userId, sendMessage } = useMessage(room);
 
   return (
     <>
@@ -18,6 +19,7 @@ const ChatRoom = (props) => {
         <Link to={"/ChattyYappy"}>Leave Room</Link>
       </div>
       <Chat messages={chatMessages} myId={userId} onSend={sendMessage} />
+      <Users users={users} />
     </>
   );
 };
