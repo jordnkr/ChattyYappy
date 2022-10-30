@@ -11,13 +11,18 @@ const JoinRoom = () => {
   };
 
   return (
-    <>
-      <label>
+    <div className={classes.form}>
+      <label className={classes["room-label"]}>
         Room Name
-        <input type="text" onChange={roomChangeHandler} value={roomName} />
+        <input
+          type="text"
+          onChange={roomChangeHandler}
+          value={roomName}
+          className={classes["room-input"]}
+        />
       </label>
-      <div><Link to={`/ChattyYappy/${roomName}`}>Join Room</Link></div>
-    </>
+      <Link to={`/ChattyYappy/${roomName}`} className={classes["join-button"]}>Join Room</Link>
+    </div>
   );
 };
 

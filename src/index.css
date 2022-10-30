@@ -8,6 +8,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a, a:visited {
-  color: #2A5CA2;
+.error {
+  background-color: rgb(237, 87, 87);
+  color: rgb(43, 4, 4);
 }
