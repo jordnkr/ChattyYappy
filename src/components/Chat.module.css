@@ -1,10 +1,18 @@
+.chat {
+  width: 100%;
+  border: solid 1px black;
+  overflow-y: auto;
+  flex: 1 1px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .messages {
   width: 100%;
 }
 
 .message {
   border-bottom: solid 1px rgb(78, 78, 78);
-  max-width: 500px;
   padding-bottom: 10px;
   line-height: 20px;
 }
@@ -15,4 +23,10 @@
 
 .my-message {
   color: red;
+}
+
+@media (max-width: 725px) {
+  .chat {
+    width: 96%;
+  }
 }

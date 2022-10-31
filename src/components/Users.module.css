@@ -1,3 +1,8 @@
+.users {
+  border: solid 1px black;
+  padding: 0px 5px;
+}
+
 .user {
   color: green;
 }

@@ -1,0 +1,13 @@
+.info {
+  text-align: center;
+  flex: 0 1 auto;
+}
+
+.info > h2 {
+  margin: 5px 0px;
+  font-size: 18px;
+}
+
+/* .leave {
+  margin-bottom: 10px;
+} */

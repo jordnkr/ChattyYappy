@@ -11,17 +11,24 @@ const JoinRoom = () => {
   };
 
   return (
-    <div className={classes.form}>
-      <label className={classes["room-label"]}>
-        Room Name
-        <input
-          type="text"
-          onChange={roomChangeHandler}
-          value={roomName}
-          className={classes["room-input"]}
-        />
-      </label>
-      <Link to={`/ChattyYappy/${roomName}`} className={classes["join-button"]}>Join Room</Link>
+    <div className={classes.contain}>
+      <div className={classes.form}>
+        <label className={classes["room-label"]}>
+          Room Name
+          <input
+            type="text"
+            onChange={roomChangeHandler}
+            value={roomName}
+            className={classes["room-input"]}
+          />
+        </label>
+        <Link
+          to={`/ChattyYappy/${roomName}`}
+          className={classes["join-button"]}
+        >
+          Join Room
+        </Link>
+      </div>
     </div>
   );
 };

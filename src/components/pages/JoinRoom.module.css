@@ -1,3 +1,7 @@
+.contain {
+  flex: 1 1 auto;
+}
+
 .form,
 .room-label {
   width: 100%;
@@ -24,7 +28,7 @@
 }
 
 .room-label {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
 }
 

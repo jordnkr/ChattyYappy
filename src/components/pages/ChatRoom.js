@@ -1,26 +1,31 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import useMessage from "../../hooks/use-message";
 import Chat from "../Chat";
+import MessageInput from "../MessageInput";
+import RoomInfo from "../RoomInfo";
+import ChatContainer from "../UI/ChatContainer";
 import Users from "../Users";
 
 import classes from "./ChatRoom.module.css";
 
-const ChatRoom = (props) => {
+const ChatRoom = () => {
   const room = useParams().room;
   const { chatMessages, users, userId, sendMessage } = useMessage(room);
 
   return (
-    <>
-      <div>
-        <h2>You're in room: {room}</h2>
+    <div className={classes.room}>
+      <div className={classes.contain}>
+        <RoomInfo roomName={room} />
+        <div className={classes.content}>
+          <Users users={users} />
+          <ChatContainer>
+            <Chat messages={chatMessages} myId={userId} onSend={sendMessage} />
+            <MessageInput onSend={sendMessage} />
+          </ChatContainer>
+        </div>
       </div>
-      <div className={classes.leave}>
-        <Link to={"/ChattyYappy"}>Leave Room</Link>
-      </div>
-      <Chat messages={chatMessages} myId={userId} onSend={sendMessage} />
-      <Users users={users} />
-    </>
+    </div>
   );
 };
 

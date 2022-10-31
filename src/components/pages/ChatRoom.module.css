@@ -1,3 +1,25 @@
-.leave {
-  margin-bottom: 25px;
+.room {
+  flex: 1 1 auto;
+}
+
+.contain {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1 1 auto;
+  display: flex;
+}
+
+@media (max-width: 725px) {
+  .content {
+    width: 96%;
+    display: inherit;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
 }
