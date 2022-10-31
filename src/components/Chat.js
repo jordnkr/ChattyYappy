@@ -25,7 +25,9 @@ const Chat = (props) => {
                 : classes["other-message"]
             }`}
           >
-            {message.content}
+            {message.network
+              ? `${message.user} ${message.content}`
+              : `${message.user} (${message.timestamp}): ${message.content}`}
           </p>
         ))}
       </div>
