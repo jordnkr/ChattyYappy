@@ -10,6 +10,13 @@ const useMessage = (room) => {
   const [userId, setUserId] = useState("");
   let socketRef = useRef();
 
+  const updateMessages = (messageInfo) => {
+    setChatMessages((prevMessages) => [
+      ...prevMessages,
+      { id: messageInfo[0], content: messageInfo[1] },
+    ]);
+  };
+
   useEffect(() => {
     socketRef.current = io(SERVER_URL, {
       query: {
@@ -20,18 +27,20 @@ const useMessage = (room) => {
     socketRef.current.on("id-delivery", (message) => {
       setUserId(message);
       console.log(message);
-    })
-
-    // receive a message from the server
-    socketRef.current.on("mail-delivery", (message) => {
-      setChatMessages((prevMessages) => [
-        ...prevMessages,
-        { id: message[0], content: message[1] },
-      ]);
     });
 
-    socketRef.current.on("user-update", (users) => {
-      setUsers(users);
+    // new user connection
+    socketRef.current.on("new-connection", (messageInfo) => {
+      updateMessages(messageInfo);
+    });
+
+    socketRef.current.on("user-update", (updatedUsers) => {
+      setUsers(updatedUsers);
+    });
+
+    // receive a message from the server
+    socketRef.current.on("mail-delivery", (messageInfo) => {
+      updateMessages(messageInfo);
     });
 
     return () => {
@@ -39,8 +48,8 @@ const useMessage = (room) => {
     };
   }, [room]);
 
+  // send a message to the server
   const sendMessage = (message) => {
-    // send a message to the server
     socketRef.current.emit("new-message", message);
   };
 
