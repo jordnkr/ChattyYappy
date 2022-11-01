@@ -1,23 +1,21 @@
 import { useState } from "react";
 import classes from "./Chat.module.css";
+import Message from "./Message";
 
 const Chat = (props) => {
   return (
     <div className={classes.chat}>
       <div className={classes.messages}>
         {props.messages.map((message, i) => (
-          <p
+          <Message
             key={i}
-            className={`${classes.message} ${
-              message.id === props.myId
-                ? classes["my-message"]
-                : classes["other-message"]
-            }`}
-          >
-            {message.network
-              ? `${message.user} ${message.content}`
-              : `${message.user} (${message.timestamp}): ${message.content}`}
-          </p>
+            messageId={message.id}
+            myId={props.myId}
+            network={message.network}
+            user={message.user}
+            timestamp={message.timestamp}
+            content={message.content}
+          />
         ))}
       </div>
     </div>

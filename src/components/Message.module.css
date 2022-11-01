@@ -1,0 +1,27 @@
+.message {
+  padding-bottom: 10px;
+  line-height: 20px;
+  width: 52%;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.other-message {
+  background-color: rgb(180, 180, 180);
+  margin-right: auto;
+  margin-left: 1%;
+}
+
+.my-message {
+  background-color: #3C79CD;
+  color: white;
+  margin-left: auto;
+  margin-right: 1%;
+}
+
+@media (max-width: 500px) {
+  .message {
+    width: 60%;
+  }
+}
