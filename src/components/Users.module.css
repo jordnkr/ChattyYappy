@@ -2,9 +2,16 @@
   padding: 0px 5px;
   background-color: white;
   font-size: 14px;
+  width: 15%;
 }
 
-@media (max-width: 725px) {
+@media (max-width: 1050px) {
+  .users {
+    width: 20%;
+  }
+}
+
+@media (max-width: 775px) {
   .users {
     display: none;
   }
