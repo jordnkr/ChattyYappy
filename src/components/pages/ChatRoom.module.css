@@ -15,11 +15,6 @@
 
 @media (max-width: 725px) {
   .content {
-    width: 96%;
     display: inherit;
-  }
-
-  .wrapper {
-    width: 100%;
   }
 }

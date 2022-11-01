@@ -7,7 +7,7 @@ const RoomInfo = (props) => {
     <div className={classes.info}>
       <h2>Room: {props.roomName}</h2>
       <div className={classes.leave}>
-        <Link to={"/ChattyYappy"}>Leave Room</Link>
+        <Link className={classes.btn} to={"/ChattyYappy"}>Leave Room</Link>
       </div>
     </div>
   );

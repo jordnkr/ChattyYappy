@@ -8,6 +8,16 @@
   font-size: 18px;
 }
 
-/* .leave {
+.leave {
   margin-bottom: 10px;
-} */
+}
+
+.btn {
+  color: white;
+  background-color: #aa5252;
+  text-decoration: none;
+  margin-top: 5px;
+  border-radius: 3px;
+  padding: 3px 10px;
+  height: 15px;
+}

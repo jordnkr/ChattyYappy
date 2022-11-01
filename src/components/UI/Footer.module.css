@@ -1,7 +1,7 @@
 .footer {
   flex: 0 1 auto;
-  background-color: rgb(213, 213, 213);
   text-align: center;
+  border-top: solid 1px rgb(255, 255, 255);
 }
 
 .footer > p > a {

@@ -1,8 +1,11 @@
 .users {
-  border: solid 1px black;
   padding: 0px 5px;
+  background-color: white;
+  font-size: 14px;
 }
 
-.user {
-  color: green;
+@media (max-width: 725px) {
+  .users {
+    display: none;
+  }
 }
