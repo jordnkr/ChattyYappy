@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import classes from "./MessageInput.module.css";
 
 const MessageInput = (props) => {
@@ -9,8 +9,10 @@ const MessageInput = (props) => {
   };
 
   const sendMessageHandler = () => {
-    props.onSend(message);
-    setMessage("");
+    if (message.trim() !== "") {
+      props.onSend(message);
+      setMessage("");
+    }
   };
 
   return (
@@ -21,7 +23,9 @@ const MessageInput = (props) => {
         className={classes.text}
         onChange={messageChangeHandler}
       />
-      <button onClick={sendMessageHandler} className={classes.send}>Send</button>
+      <button onClick={sendMessageHandler} className={classes.send}>
+        Send
+      </button>
     </div>
   );
 };

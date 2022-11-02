@@ -5,6 +5,7 @@
   padding: 8px 10px;
   border-radius: 4px;
   margin-top: 10px;
+  white-space: pre-line;
 }
 
 .other-message {
