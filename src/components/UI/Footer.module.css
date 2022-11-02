@@ -1,7 +1,14 @@
 .footer {
   flex: 0 1 auto;
+  position: fixed;
+  background: rgb(245, 245, 245);
+  height: 55px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   text-align: center;
   border-top: solid 1px rgb(255, 255, 255);
+  z-index: 100;
 }
 
 .footer > p > a {
