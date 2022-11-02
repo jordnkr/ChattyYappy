@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ChattyYappy/static/css/main.aebf5171.css",
-    "main.js": "/ChattyYappy/static/js/main.779d9788.js",
+    "main.css": "/ChattyYappy/static/css/main.dbf9ad0b.css",
+    "main.js": "/ChattyYappy/static/js/main.89eb5ce3.js",
     "index.html": "/ChattyYappy/index.html",
-    "main.aebf5171.css.map": "/ChattyYappy/static/css/main.aebf5171.css.map",
-    "main.779d9788.js.map": "/ChattyYappy/static/js/main.779d9788.js.map"
+    "main.dbf9ad0b.css.map": "/ChattyYappy/static/css/main.dbf9ad0b.css.map",
+    "main.89eb5ce3.js.map": "/ChattyYappy/static/js/main.89eb5ce3.js.map"
   },
   "entrypoints": [
-    "static/css/main.aebf5171.css",
-    "static/js/main.779d9788.js"
+    "static/css/main.dbf9ad0b.css",
+    "static/js/main.89eb5ce3.js"
   ]
 }
