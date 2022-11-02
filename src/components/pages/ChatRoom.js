@@ -16,7 +16,7 @@ const ChatRoom = () => {
   return (
     <div className={classes.room}>
       <div className={classes.contain}>
-        <RoomInfo roomName={room} />
+        <RoomInfo roomName={room} userCount={users.length} />
         <div className={classes.content}>
           <Users users={users} />
           <ChatContainer>

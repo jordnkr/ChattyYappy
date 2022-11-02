@@ -9,6 +9,7 @@ const RoomInfo = (props) => {
       <div className={classes.leave}>
         <Link className={classes.btn} to={"/ChattyYappy"}>Leave Room</Link>
       </div>
+      <p className={classes["mobile-count"]}>Users in room: {props.userCount}</p>
     </div>
   );
 };

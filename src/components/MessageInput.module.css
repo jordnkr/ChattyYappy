@@ -1,0 +1,58 @@
+.input {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.text {
+  width: 90%;
+  margin-left: 1%;
+  border: solid 1px #737373;
+  resize: none;
+  height: 65px;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+.send {
+  height: 65px;
+  width: 6%;
+  margin-left: 1%;
+  margin-right: 1%;
+  border: solid 1px #737373;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send:active {
+  background-color: #d8d8d8;
+}
+
+@media (max-width: 1100px) {
+  .text {
+    width: 85%;
+  }
+
+  .send {
+    width: 11%;
+  }
+}
+
+@media (max-width: 850px) {
+  .text {
+    width: 80%;
+  }
+
+  .send {
+    width: 16%;
+  }
+}
+
+@media (max-width: 425px) {
+  .text {
+    width: 75%;
+  }
+
+  .send {
+    width: 21%;
+  }
+}

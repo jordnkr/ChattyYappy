@@ -14,13 +14,14 @@ const MessageInput = (props) => {
   };
 
   return (
-    <div>
-      <input
+    <div className={classes.input}>
+      <textarea
         placeholder="message..."
         value={message}
+        className={classes.text}
         onChange={messageChangeHandler}
       />
-      <button onClick={sendMessageHandler}>Send</button>
+      <button onClick={sendMessageHandler} className={classes.send}>Send</button>
     </div>
   );
 };
