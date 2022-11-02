@@ -6,11 +6,15 @@
 .text {
   width: 90%;
   margin-left: 1%;
-  border: solid 1px #737373;
+  border: solid 1px #cbcbcb;
   resize: none;
   height: 65px;
   border-radius: 2px;
   font-family: inherit;
+}
+
+.text:focus, .text:active {
+  outline: 1px solid #3C79CD;
 }
 
 .send {
@@ -22,7 +26,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  color: #3C79CD;
+  color: #3c79cd;
   font-weight: bold;
   font-size: 18px;
 }
