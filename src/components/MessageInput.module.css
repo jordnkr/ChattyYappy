@@ -31,6 +31,16 @@
   background-color: #e6e6e6;
 }
 
+@media (min-width: 2000px) {
+  .text {
+    width: 93%;
+  }
+
+  .send {
+    width: 6%;
+  }
+}
+
 @media (max-width: 1100px) {
   .text {
     width: 85%;

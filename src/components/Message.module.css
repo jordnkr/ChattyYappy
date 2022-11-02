@@ -8,6 +8,17 @@
   white-space: pre-line;
 }
 
+.message-user {
+  font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.message-text {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
 .other-message {
   background-color: rgb(180, 180, 180);
   margin-right: auto;

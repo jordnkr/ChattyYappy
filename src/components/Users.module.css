@@ -3,6 +3,18 @@
   background-color: white;
   font-size: 14px;
   width: 15%;
+  text-align: center;
+}
+
+.user-count {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+@media (min-width: 2000px) {
+  .users {
+    width: 10%;
+  }
 }
 
 @media (max-width: 1050px) {

@@ -11,7 +11,8 @@ const Message = (props) => {
       }`}
     >
       {props.network && `${props.user} ${props.content}`}
-      {!props.network && `${props.user} (${props.timestamp}): ${props.content}`}
+      {!props.network && <p className={classes["message-user"]}><b>{props.user}</b> ({props.timestamp})</p>}
+      {!props.network && <p className={classes["message-text"]}>{props.content}</p>}
     </div>
   );
 };
