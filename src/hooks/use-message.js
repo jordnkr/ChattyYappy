@@ -1,24 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
 
-const SERVER_URL = "http://localhost:4000";
-//const SERVER_URL = "https://chat-server-jk3lh509uq2j34qag4.herokuapp.com";
+//const SERVER_URL = "http://localhost:4000";
+const SERVER_URL = "https://chat-server-jk3lh509uq2j34qag4.herokuapp.com";
 
 const useMessage = (room) => {
   const [chatMessages, setChatMessages] = useState([]);
   const [users, setUsers] = useState([]);
-  const [userId, setUserId] = useState("");
   let socketRef = useRef();
 
   const updateMessages = (messageInfo, connectChange) => {
     setChatMessages((prevMessages) => [
       ...prevMessages,
       {
-        id: messageInfo[0],
-        user: messageInfo[1],
-        timestamp: messageInfo[2],
-        content: messageInfo[3],
-        network: connectChange
+        user: messageInfo[0],
+        content: messageInfo[1],
+        isMine: messageInfo[2] === socketRef.current.id,
+        network: connectChange,
+        timestamp: new Date().toLocaleTimeString(),
       },
     ]);
   };
@@ -28,11 +27,6 @@ const useMessage = (room) => {
       query: {
         room: room,
       },
-    });
-
-    socketRef.current.on("id-delivery", (message) => {
-      setUserId(message);
-      console.log(message);
     });
 
     // new user connection
@@ -66,7 +60,6 @@ const useMessage = (room) => {
   return {
     chatMessages,
     users,
-    userId,
     sendMessage,
   };
 };

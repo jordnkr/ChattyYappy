@@ -2,7 +2,8 @@
   flex: 0 1 auto;
   position: fixed;
   background: rgb(245, 245, 245);
-  height: 55px;
+  height: 40px;
+  line-height: 5px;
   left: 0;
   right: 0;
   bottom: 0;

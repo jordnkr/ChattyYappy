@@ -6,10 +6,8 @@ const Message = (props) => {
     <>
       {!props.network && (
         <p
-          className={`${classes["message-user"]} ${
-            props.messageId === props.myId
-              ? classes["my-message-user"]
-              : classes["other-message-user"]
+          className={`${classes["message-date"]} ${
+            props.isMine ? classes["my-date"] : classes["other-date"]
           }`}
         >
           <b>{props.user}</b> ({props.timestamp})
@@ -17,9 +15,7 @@ const Message = (props) => {
       )}
       <div
         className={`${classes.message} ${
-          props.messageId === props.myId
-            ? classes["my-message"]
-            : classes["other-message"]
+          props.isMine ? classes["my-message"] : classes["other-message"]
         }`}
       >
         {props.network && `${props.user} ${props.content}`}

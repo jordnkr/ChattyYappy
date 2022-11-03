@@ -11,7 +11,7 @@ import classes from "./ChatRoom.module.css";
 
 const ChatRoom = () => {
   const room = useParams().room;
-  const { chatMessages, users, userId, sendMessage } = useMessage(room);
+  const { chatMessages, users, sendMessage } = useMessage(room);
 
   return (
     <div className={classes.room}>
@@ -20,7 +20,7 @@ const ChatRoom = () => {
         <div className={classes.content}>
           <Users users={users} />
           <ChatContainer>
-            <Chat messages={chatMessages} myId={userId} onSend={sendMessage} />
+            <Chat messages={chatMessages} onSend={sendMessage} />
             <MessageInput onSend={sendMessage} />
           </ChatContainer>
         </div>

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React from "react";
+
 import classes from "./Chat.module.css";
 import Message from "./Message";
 
@@ -9,12 +10,11 @@ const Chat = (props) => {
         {props.messages.map((message, i) => (
           <Message
             key={i}
-            messageId={message.id}
-            myId={props.myId}
-            network={message.network}
             user={message.user}
-            timestamp={message.timestamp}
             content={message.content}
+            timestamp={message.timestamp}
+            isMine={message.isMine}
+            network={message.network}
           />
         ))}
       </div>
