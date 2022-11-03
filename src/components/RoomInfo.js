@@ -5,11 +5,17 @@ import classes from "./RoomInfo.module.css";
 const RoomInfo = (props) => {
   return (
     <div className={classes.info}>
-      <h2>Room: {props.roomName}</h2>
-      <div className={classes.leave}>
-        <Link className={classes.btn} to={"/ChattyYappy"}>Leave Room</Link>
+      <div className={classes.room}>
+        <h2>Room: {props.roomName}</h2>
+        <div className={classes.leave}>
+          <Link className={classes.btn} to={"/ChattyYappy"}>
+            Leave Room
+          </Link>
+        </div>
       </div>
-      <p className={classes["mobile-count"]}>Users in room: {props.userCount}</p>
+      <p className={classes["mobile-count"]}>
+        Users in room: {props.userCount}
+      </p>
     </div>
   );
 };

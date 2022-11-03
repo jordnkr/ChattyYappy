@@ -1,15 +1,23 @@
 .info {
   text-align: center;
   flex: 0 1 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.room {
+  display: flex;
+  flex-direction: column;
 }
 
 .mobile-count {
   display: none;
 }
 
-.info > h2 {
-  margin: 5px 0px;
+.room > h2 {
   font-size: 18px;
+  margin: 0;
 }
 
 .leave {
