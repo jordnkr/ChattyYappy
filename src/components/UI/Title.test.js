@@ -5,6 +5,8 @@ describe("Title component", () => {
   test("renders correct title", () => {
     render(<Title />);
 
-    expect(screen.getByText("Chatty Yappy")).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { level: 1, name: "Chatty Yappy" })
+    ).toBeInTheDocument();
   });
 });
