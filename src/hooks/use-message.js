@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { io } from "socket.io-client";
 
 //const SERVER_URL = "http://localhost:4000";
-const SERVER_URL = "https://chat-server-jk3lh509uq2j34qag4.herokuapp.com";
+const SERVER_URL = "https://hilarious-bublanina-58b9d7.netlify.app";
 
 const useMessage = (room) => {
   const [chatMessages, setChatMessages] = useState([]);
